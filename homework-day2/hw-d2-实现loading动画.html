@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实现loading动画</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        :root {
+            --ring-width: 80px;
+            --ring-thickness: 3px;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1e1e1e;
+        }
+
+        .loading {
+            max-width: 50%;
+            text-align: center;
+            line-height: 1.4;
+            font-size: 1.2rem;
+            color: #569cd6;
+        }
+        .loading a {
+            text-decoration: none;
+            color: #0686ee;
+        }
+        .loading a:hover {
+            color: #25ce72;
+        }
+        .loading-content {
+            display: block;
+            color: #bdbdbd;
+            margin: 1rem 0 2rem 0;
+            font-size: 1rem;
+        }
+
+        .loading-ring {
+            position: relative;
+            display: inline-block;
+            width: var(--ring-width);
+            height: var(--ring-width);
+        }
+
+        .loading-ring::before,
+        .loading-ring::after {
+            content: '';
+            position: absolute;
+            box-sizing: border-box;
+            border: var(--ring-thickness) solid transparent;
+            border-radius: 50%;
+        } 
+
+        .loading-ring::before {
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            border-top-color: #24d686;
+            animation: loop-ring 500ms linear 0ms infinite normal none;
+        }
+        .loading-ring::after {
+            top: 12px;
+            right: 12px;
+            bottom: 12px;
+            left: 12px;
+            border-top-color: #24d686;
+            border-bottom-color: #24d686;
+            animation: loop-ring 1600ms linear 0ms infinite normal none;
+        }
+
+        @keyframes loop-ring {
+            to {
+                transform: rotateZ(360deg);
+                filter: hue-rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="loading">
+        <h3>进入Gitee仓库，查看成员赵柏诚的<a href="https://gitee.com/thisismyaddress/homework-day2" target="_blank">HomeWork_Day2仓库</a></h3>
+        <span class="loading-content">- 作业等待批改中</span>
+        <span class="loading-ring"></span>
+    </section>
+</body>
+</html>

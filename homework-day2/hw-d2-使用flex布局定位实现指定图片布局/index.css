@@ -1,0 +1,513 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+}
+
+/* start: 个人主页部分样式 */
+.personal-center {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.personal-cen-header {
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    color: #999;
+    text-align: center;
+    box-sizing: border-box;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.personal-cen-content {
+    flex: 1;
+    box-sizing: border-box;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding-top: 60px;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 19px;
+    overflow: hidden;
+    box-shadow: 0px 0px 4px 1px #ccc;
+}
+
+.avatar a {
+    display: block;
+}
+
+.avatar img {
+    width: 80px;
+}
+
+.user-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 19px;
+}
+
+.email-addr {
+    font-style: normal;
+    margin-bottom: 15px;
+}
+
+.email-addr a {
+    text-decoration: none;
+    color: #666;
+}
+
+.tool-box {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 45px;
+}
+
+.tool-box img {
+    width: 22px;
+}
+
+.setting,
+.mail-info,
+.ring-bell-info {
+    flex: 1;
+    display: flex;
+    align-content: center;
+}
+
+.setting {
+    justify-content: flex-start;
+}
+
+.mail-info {
+    position: relative;
+    justify-content: center;
+}
+
+.ring-bell-info {
+    position: relative;
+    justify-content: flex-end;
+}
+
+.mail-info::after,
+.ring-bell-info::after {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-size: 4px;
+}
+
+.mail-info::after {
+    content: '20';
+    top: -20%;
+    right: 10%;
+}
+
+.ring-bell-info::after {
+    content: '1';
+    top: -20%;
+    right: -20%;
+}
+
+.show-recent-trends {
+    width: 80%;
+    height: 30px;
+    line-height: 30px;
+    background-color: #eee;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.show-recent-trends a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+
+
+.show-recent-trends:hover {
+    height: auto;
+    max-height: 500px;
+    background-color: transparent;
+    font-weight: normal;
+}
+
+.show-recent-trends:hover a {
+    display: none;
+}
+
+.show-recent-trends:hover .recent-trends {
+    display: flex;
+}
+
+.recent-trends {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    display: none;
+}
+
+.recent-trends li {
+    margin: 0;
+    padding: 0;
+    background-color: #4b9afc;
+    line-height: 1.8em;
+    border-radius: 0.75em;
+    margin-bottom: 10px;
+    padding: 0px 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.recent-trends li:nth-child(2n + 1) {
+    align-self: flex-start;
+}
+
+.recent-trends li:nth-child(2n + 1) {
+    align-self: flex-end;
+}
+
+/* .show-recent-trends a::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+    transform: rotateZ(45deg);
+} */
+
+/* end: 个人主页部分样式 */
+
+/* start: 邮箱部分样式 */
+.mail {
+    flex: 2.5;
+    display: flex;
+    flex-direction: column;
+}
+
+.mail-header {
+    height: 50px;
+    /* 防止高度被压缩 */
+    flex-shrink: 0;
+    box-sizing: border-box;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+}
+
+.search-box {
+    /* border: none; */
+    flex: 8;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    position: relative;
+    flex: 1;
+    margin-left: 5%;
+    margin-right: 10%;
+}
+
+.search-bar input {
+    position: relative;
+    border: none;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    box-sizing: border-box;
+    padding-left: 30px;
+}
+
+.search-bar::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url(./img/search.png);
+    background-size: 20px;
+    cursor: pointer;
+}
+
+.search-box input:focus {
+    outline: none;
+}
+
+.nav-mail-calendar-box {
+    flex: 3;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.nav-mail-calendar {
+    width: 100%;
+    height: 40px;
+    background-color: #dedede;
+    margin-right: 20%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.mail-item,
+.calendar-item {
+    flex: 1;
+    height: 36px;
+    border-radius: 18px;
+    text-align: center;
+    line-height: 36px;
+    color: black;
+    cursor: pointer;
+}
+
+.active-mail-calendar {
+    color: white;
+    background-color: #4b9afc;
+    box-shadow: 0px 0px 3px 0px #666;
+}
+
+.mail-content {
+    flex: 1;
+    display: flex;
+}
+
+.note-book {
+    flex: 3;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.note-book-header {
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10%;
+    box-sizing: border-box;
+    font-size: 20px;
+    border-left: 5px solid black;
+    border-bottom: 1px solid #ccc;
+}
+
+.note-list {
+    flex: 7;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+.note-list::-webkit-scrollbar {
+    width: 2px;
+}
+
+.note-list::-webkit-scrollbar-track {
+    border-radius: 2px;
+}
+
+.note-list:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(125, 125, 125, .6);
+    border-radius: 2px;
+}
+
+.note-list li {
+    list-style: none;
+    margin: 0;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.5em;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    padding: 5px 30px;
+    min-height: 4.5em;
+}
+
+.note-list .img-item {
+    float: left;
+    width: 40%;
+    margin: 15px 5px 0px 40px;
+    border: none;
+    padding: 0;
+}
+
+.img-item img {
+    width: 100%;
+}
+
+.add-note-box {
+    flex: 1;
+    background-color: #4b9afc;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.add-note-btn {
+    margin-right: 20px;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    color: #4b9afc;
+    background-color: white;
+    box-shadow: 2px 2px 4px 1px black;
+}
+
+.add-note-btn:hover {
+    font-size: 18px;
+}
+
+.add-note-btn:active {
+    font-size: 15px;
+    box-shadow: none;
+}
+
+.mail-box {
+    flex: 5;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+
+.nav-recv-send {
+    margin: 10px 50px 30px 50px;
+    border-bottom: 3px solid #ccc;
+    height: 24px;
+    /* width: 100%; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.recv,
+.send {
+    width: 60px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    position: relative;
+}
+
+.nav-recv-send-text {
+    text-decoration: none;
+    color: #999;
+}
+
+.nav-recv-send-text:hover {
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 19px;
+}
+
+.active-recv-send .nav-recv-send-text{
+    color: black;
+    font-weight: bold;
+}
+
+.sender {
+    margin: 0px 50px;
+    border-bottom: 3px solid #ccc;
+    display: flex;
+    padding-bottom: 5px;
+}
+
+.sender-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+    box-shadow: 0px 0px 4px 1px #ccc;
+}
+
+.sender-avatar a {
+    display: block;
+}
+
+.sender-avatar img {
+    width: 60px;
+}
+
+.sender-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sender-name {
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.send-date {
+    color: #999;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+.mail-context {
+    padding: 0px 50px;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+p,
+li {
+    line-height: 1.5;
+}
+
+
+/* end: 邮箱部分样式 */

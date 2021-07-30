@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单的对象深拷贝</title>
+</head>
+<body>
+    <script>
+        const obj = {
+            id: 100,
+            name: 'bocheng',
+            lang: {
+                js: 100,
+                css: 100,
+                html: 100,
+                c: {
+                    c98: 80,
+                    c99: 100
+                }
+            },
+            dream: 'font-end',
+        }
+
+        obj.other = obj;
+
+        console.log(obj);
+        console.log(cloneObj(obj));
+
+        // 当对象中存在无限引用的情况时，会发生栈溢出
+        // function cloneObj(obj) {
+        //     if(typeof obj !== 'object') {
+        //         return obj;
+        //     }
+
+        //     if(obj === null) {
+        //         return null;
+        //     }
+
+        //     let newObj = {};
+        //     for(key in obj) {
+        //         if(typeof obj[key] === 'object') {
+        //             newObj[key] = cloneObj(obj[key]);
+        //         } else {
+        //             newObj[key] = obj[key];
+        //         }
+        //     }
+            
+        //     return newObj;
+        // }
+
+        function cloneObj(obj) {
+            // let allParents = [];
+            // let allChildren = [];
+
+            function _cloneObj(parent) {
+                const child = {};
+
+                if(parent === null) {
+                    return null;
+                }
+                
+                if(typeof parent !== 'object') {
+                    return parent;
+                }
+
+                // 防止无限引用的情况出现（其实好像也没什么必要这么做）
+                // let index = allParents.indexOf(parent);
+                // if(index !== -1) {
+                //     return allChildren[index];
+                // }
+
+                // allParents.push(parent);
+                // allChildren.push(child);
+
+                for(key in parent) {
+                    const val = parent[key];
+                    child[key] = val;
+                }
+
+                return child;
+            }
+
+            return _cloneObj(obj);
+        }
+    </script>
+</body>
+</html>

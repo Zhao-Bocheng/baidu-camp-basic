@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随屏幕大小变化方块的颜色</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: cyan;
+        }
+
+        @media screen and (min-width: 1200px) {
+            .box {
+                background-color: cyan;
+            }
+        }
+        @media screen and (max-width: 1200px) {
+            .box {
+                background-color: #3320e0;
+            }
+        }
+        @media screen and (max-width: 992px) {
+            .box {
+                background-color: magenta;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .box {
+                background-color: #ff0055;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

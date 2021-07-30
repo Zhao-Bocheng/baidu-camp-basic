@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图中目录树数组-生成HTML字符</title>
+</head>
+
+<body>
+    <script>
+        const dirArr = [
+            'index.html',
+            'js',
+            ['index.js'],
+            'css',
+            ['index.css']
+        ];
+
+        let res = '';
+        for (let i = 0; i < dirArr.length; i++) {
+            if (i + 1 < dirArr.length && typeof dirArr[i + 1] !== 'string') {
+                let subRes = '';
+                for(let j = 0; j < dirArr[i + 1].length; j ++) {
+                    subRes += '<li>' + dirArr[i + 1][j] + '</li>';
+                }
+                subRes = '<ul>' + subRes + '</ul>';
+                res += '<li>' + dirArr[i] + subRes + '</li>';
+
+                i ++;
+            } else {
+                res += '<li>' + dirArr[i] + '</li>';
+            }
+        }
+        res = '<ul>' + res + '</ul>';
+
+        document.body.innerHTML = res;
+    </script>
+</body>
+
+</html>

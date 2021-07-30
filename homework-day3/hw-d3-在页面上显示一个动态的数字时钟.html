@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在页面上显示一个动态的数字时钟</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="clock" style="font-family: monospace; font-size: 50px;"></div>
+    <script>
+        const clock = document.getElementById('clock');
+        clock.textContent = getTime();
+        setInterval(function () {
+            clock.textContent = getTime();
+        }, 1000);
+
+        function getTime() {
+            let date = new Date();
+            let hour = date.getHours();
+            let min = date.getMinutes();
+            let sec = date.getSeconds();
+
+            seperator = sec % 2 ? ' ' : ':';
+
+            hour = hour < 10 ? '0' + hour : hour;
+            min = min < 10 ? '0' + min : min;
+            sec = sec < 10 ? '0' + sec : sec;
+
+            return [hour, min, sec].join(seperator);
+        }
+    </script>
+</body>
+
+</html>

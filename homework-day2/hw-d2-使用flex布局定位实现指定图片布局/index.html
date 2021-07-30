@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实现指定图片布局</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <aside class="personal-center">
+        <header class="personal-cen-header">
+            个人中心
+        </header>
+        <section class="personal-cen-content">
+            <div class="avatar">
+                <a href="#"><img src="./img/avatar.jpg" alt="头像"></a>
+            </div>
+            <span class="user-name">Zhao Bocheng</span>
+            <address class="email-addr">
+                <a href="#">101388918@qq.com</a>
+            </address>
+            <div class="tool-box">
+                <a href="#" class="setting">
+                    <img src="./img/setting.png" alt="设置">
+                </a>
+                <a href="#" class="mail-info">
+                    <img src="./img/mail.png" alt="邮箱">
+                </a>
+                <a href="#" class="ring-bell-info">
+                    <img src="./img/ring-bell.png" alt="通知">
+                </a>
+            </div>
+            <div class="show-recent-trends">
+                <a href="#">展开显示动态消息</a>
+                <ul class="recent-trends">
+                    <li>你今天真帅</li>
+                    <li>今天天气真好</li>
+                    <li>有人提到你@Monica</li>
+                    <li>Monica今天到访你的空间</li>
+                    <li>么么哒</li>
+                </ul>
+            </div>
+        </section>
+    </aside>
+
+    <article class="mail">
+        <header class="mail-header">
+            <div class="search-box">
+                <label class="search-bar">
+                    <input type="text" placeholder="请搜索...">
+                </label>
+            </div>
+            <div class="nav-mail-calendar-box">
+                <nav class="nav-mail-calendar">
+                    <div class="mail-item active-mail-calendar">邮箱</div>
+                    <div class="calendar-item">日历</div>
+                </nav>
+            </div>
+        </header>
+        <section class="mail-content">
+            <section class="note-book">
+                <h2 class="note-book-header">记事本</h2>
+                <ul class="note-list">
+                    <li class="img-item"><img src="./img/cheer-up.png" alt="cheer-up"></li>
+                    <li>我爱学习，学习爱我，我要进大厂，暑假学习走起！！！</li>
+                    <li>今天记得要提交百度训练营作业，今天记得要提交百度训练营作业</li>
+                    <li>今天记得下午6点半找女友友吃饭</li>
+                    <li>9号回家记得通知我妈一声</li>
+                    <li>7号提交软件工程二级项目</li>
+                    <li>调个闹钟明天下午1点开项目小组会议</li>
+                    <li>今天中了六合彩300万，记得蒙面去兑奖</li>
+                    <li>3.141592653</li>
+                </ul>
+                <div class="add-note-box">
+                    <a href="#" class="add-note-btn">添加 +</a>
+                </div>
+            </section>
+
+            <section class="mail-box">
+                <nav class="nav-recv-send">
+                    <span class="recv active-recv-send">
+                        <a href="#" class="nav-recv-send-text">收件箱</a>
+                    </span>
+                    <span>/</span>
+                    <span class="send">
+                        <a href="#" class="nav-recv-send-text">已发送</a>
+                    </span>
+                </nav>
+                <article class="read-mail">
+                    <header class="sender">
+                        <div class="sender-avatar">
+                            <a href="#"><img src="./img/monica.png" alt="sender"></a>
+                        </div>
+                        <div class="sender-info">
+                            <h3 class="sender-name">Monica</h3>
+                            <p class="send-date">2021年7月4日 星期日 下午13:23</p>
+                        </div>
+                    </header>
+                    <main class="mail-context">
+                        <h1>学习建议</h1>
+                        <h2>推荐一些学习资料</h2>
+                        <p>书籍</p>
+                        <ul>
+                            <li>
+                                HTML、CSS：《Head First HTML与CSS》、《CSS揭秘》、《精通CSS高级Web标准解决方案》、《CSS权威指南》、《图解CSS3核心技术与案例实战》、《CSS禅意花图》、《CSS世界》......
+                            </li>
+                            <li>
+                                JavaScript：《JavaScript高级程序设计》、《JavaScript权威指南》、《你不知道的JavaScript》、《深入理解ES6》、《编写可维护的JavaScript》、《高性能JavaScript》、《JavaScript设计模式》、《JavaScript语言精髓和编程实践》......
+                            </li>
+                            <li>
+                                计算机基础知识及进阶：《HTTP权威指南》、《Webkit技术内幕》、《深入理解计算机系统》、《代码大全》、《编程珠玑》、《设计模式》......
+                            </li>
+                            <li>
+                                设计：《写给大家看的设计书》、《点石成金》、《用户体验要求》
+                            </li>
+                        </ul>
+                        <p>带着目的进行书籍的选择和阅读，辩证独立思考进行选择，辩证地进行阅读</p>
+                    </main>
+                </article>
+            </section>
+        </section>
+    </article>
+</body>
+
+</html>

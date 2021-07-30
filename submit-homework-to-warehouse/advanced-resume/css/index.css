@@ -1,0 +1,645 @@
+@import url(./base.css);
+@import url(../font/name-logo/font-logo.css);
+@import url(../font/comment-avatar/comment-avatar.css);
+
+#resume-header {
+    height: 96px;
+    background-color: #42b983;
+}
+
+#header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+#name-logo {
+    font-family: "GreatVibes";
+    font-size: 56px;
+    color: white;
+    font-weight: bold;
+}
+
+.anchor-list {
+    display: flex;
+    color: white;
+    flex: 1;
+    justify-content: flex-end;
+    margin-right: 40px;
+    font-size: 14px;
+}
+
+.anchor-item {
+    /* width: 100px;
+    text-align: center; */
+    font-weight: bold;
+}
+
+.anchor-item a:hover {
+    color: #34495e;
+}
+
+.anchor-seperator {
+    margin: 0px 20px;
+}
+
+.anchor-seperator::before {
+    content: '|';
+}
+
+#avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: pink;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#avatar img {
+    width: 80px;
+    height: auto;
+}
+
+.zoom-out-avatar {
+    display: none;
+}
+
+.zoom-out-avatar img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: auto;
+}
+
+.zoom-out-avatar .mask {
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    opacity: 0.6;
+}
+
+#resume-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 160px;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #42b983;
+    box-sizing: border-box;
+}
+
+.contact-info {
+    font-style: normal;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.contact-info .iconfont {
+    font-size: 14px;
+}
+
+#resume-self-intro {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#skill-intro {
+    width: 240px;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #42b983;
+}
+
+#skill-intro h3 {
+    text-align: center;
+}
+
+.skill-list {
+    min-height: 200px;
+    text-align: right;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+}
+
+.skill-name {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.skill-mastery-bar {
+    flex: 1.5;
+    height: 20px;
+    box-sizing: border-box;
+    padding: 2px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.skill-mastery-bar::before {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 16px;
+    border-radius: 8px;
+    background-color: #34495e;
+}
+
+.skill-item:nth-child(1) .skill-mastery-bar:before {
+    width: 50%;
+}
+.skill-item:nth-child(2) .skill-mastery-bar:before {
+    width: 70%;
+}
+.skill-item:nth-child(3) .skill-mastery-bar:before {
+    width: 65%;
+}
+.skill-item:nth-child(4) .skill-mastery-bar:before {
+    width: 50%;
+}
+.skill-item:nth-child(5) .skill-mastery-bar:before {
+    width: 30%;
+}
+.skill-item:nth-child(6) .skill-mastery-bar:before {
+    width: 40%;
+}
+.skill-item:nth-child(7) .skill-mastery-bar:before {
+    width: 50%;
+}
+
+#self-intro {
+    display: flex;
+    flex-direction: column;
+    width: 710px;
+    background-color: #42b983;
+}
+
+.tab-bar {
+    display: flex;
+    height: 49px;
+    line-height: 49px;
+}
+
+.tab-bar-item {
+    flex: 1;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tab-bar-item:last-child {
+    border-right: none;
+}
+
+.selected-tab-bar-item {
+    border-bottom: none;
+}
+
+.self-content {
+    flex: 1;
+    display: flex;
+    font-size: 14px;
+}
+
+.tab-bar-page {
+    width: 100%;
+    flex: 1;
+    padding: 20px 40px;
+    display: none;
+}
+
+.selected-tab-bar-page {
+    display: block;
+}
+
+.experience-item {
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.experience-duration {
+    width: 22%;
+    margin-right: 10px;
+}
+
+.experience-intro {
+    flex: 1;
+}
+
+#resume-project-intro {
+    margin-top: 10px;
+}
+
+.project-item {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+/* .project-intro {
+    box-sizing: border-box;
+} */
+
+.project-item:nth-child(2n + 1) {
+    background-color: #42b983;
+}
+
+/* .project-item:nth-child(2n + 1) .project-intro {
+    
+} */
+
+.project-item:nth-child(2n) {
+    color: #34495e;
+}
+
+/* .project-item:nth-child(2n) .project-intro {
+    
+} */
+
+.project-intro {
+    display: flex;
+    align-items: center;
+}
+
+.project-logo {
+    width: 120px;
+    height: 120px;
+}
+
+.project-logo img {
+    width: 100%;
+    height: auto;
+}
+
+.project-info {
+    flex: 1;
+    min-height: 250px;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-info-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-duration {
+    font-size: 14px;
+    align-self: flex-end;
+}
+
+.project-role-play {
+    font-size: 14px;
+}
+
+.tech-tag li {
+    font-size: 14px;
+    float: left;
+}
+
+.tech-tag-seperator::before {
+    content: '|';
+    padding: 0px 5px;
+}
+
+:root {
+    --min-size: 120;
+    --max-size: 200;
+}
+
+.aside-project-demo-img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* 这个的处理很关键 */
+    left: calc(100% - (100% - 960px) / 2 + 20px);
+    max-width: calc(var(--max-size) * 1px);
+    max-height: calc(var(--max-size) * 1px);
+    min-width: calc(var(--min-size) * 1px);
+    min-height: calc(var(--min-size) * 1px);
+}
+
+@media screen and (min-width: 1240px) {  
+    .aside-project-demo-img {
+        width: calc((100vw - 1240px) * (var(--max-size) - var(--min-size)) / (1400 - 1240) + 120px);
+        height: calc((100vw - 1240px) * (var(--max-size) - var(--min-size)) / (1400 - 1240) * 120px);
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .aside-project-demo-img {
+        display: none;
+    }
+}
+
+.aside-project-demo-img img {
+    width: 100%;
+    height: auto;
+}
+
+#interact-part {
+    height: 370px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+#intro-graphs {
+    width: 630px;
+    margin-right: 10px;
+    background-color: #42b983;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.intro-graphs-item {
+    width: 150px;
+    height: 180px;
+    background-color: red;
+    position: relative;
+}
+
+.intro-graphs-item:hover {
+    bottom: 3px;
+}
+
+.intro-graphs-info {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    font-size: 12px;
+    padding: 3px 5px;
+}
+
+/* 点赞效果的CSS实现 */
+input[id^="like-btn-"] {
+    /* 让这个复选框消失，只留下标签 */
+    display: none;
+}
+
+:root {
+    --label-size: 17px;
+    --label-after: 60px;
+}
+
+.like-btn-click-area {
+    position: absolute;
+    bottom: 3px;
+    right: 5px;
+    width: var(--label-size);
+    height: var(--label-size);
+    /* background-color: white; */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.like-btn-click-area::after {
+    content: '';
+    position: absolute;
+    top: calc((var(--label-size) - var(--label-after)) / 2);
+    left: calc((var(--label-size) - var(--label-after)) / 2);
+    width: var(--label-after);
+    height: var(--label-after);
+    background-image: url(../img/web_heart_animation.png);
+    background-size: auto var(--label-after);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+input[id^="like-btn-"]:checked + .like-btn-click-area {
+    /* 取消隐藏，以便显示点赞爱心星星动画 */
+    overflow: visible;
+    /* 通过动画延迟隐藏 */
+    animation: hiddenAni 0s steps(1) 0.4s 1 forwards;
+}
+
+input[id^="like-btn-"]:checked + .like-btn-click-area::after {
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    /* 点赞动画 */
+    animation: heart-burst 0.4s steps(28) 0s 1 forwards;
+}
+
+@keyframes hiddenAni {
+    to {
+        overflow: hidden;
+    }
+}
+
+@keyframes heart-burst {
+    from {
+        /* background-position: left; */
+        background-position: 0 0;
+    }
+    to {
+        /* background-position: right; */
+        background-position: 100% 0;
+    }
+}
+
+#message-board {
+    flex: 1;
+    background-color: #42b983;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#message-board h3 {
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.message-list {
+    flex: 2.5;
+    margin: 10px 0px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.message-list::-webkit-scrollbar {
+    width: 0px;
+}
+
+.list-empty-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.message-item {
+    height: 80px;
+    margin-bottom: 10px;
+    display: flex;
+    /* align-items: center; */
+    position: relative;
+}
+
+.message-item:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+.message-item:nth-child(2n) .writer-avatar {
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+.writer-avatar {
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+
+}
+
+.writer-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    overflow: hidden;
+    /* 为头像使用特殊字体 */
+    font-family: "LongCang";
+    font-size: 40px;
+    text-align: center;
+    line-height: 50px;
+    color: #34495e;
+}
+
+.writer-photo img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* 省略字符过长的名称 */
+.writer-name {
+    font-size: 12px;
+    color: #fff;
+}
+
+.message-content {
+    flex: 1;
+    padding: 5px;
+    font-size: 14px;
+    line-height: 1.2;
+    background-color: white;
+    color: #34495e;
+    /* 多余文字省略号显示 */
+    overflow: auto;
+    /* text-overflow: ellipsis; */
+}
+
+.message-content::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* .expand-text-btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 12px!important;
+    color: #333;
+    cursor: pointer;
+} */
+
+.comment-op {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+
+textarea::-webkit-scrollbar {
+    width: 0px;
+}
+
+.comment-content-area {
+    width: 100%;
+    height: calc((100% - 10px) / 3 * 2);
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid #34495e;
+    margin-bottom: 10px;
+    padding: 3px;
+    resize: none;
+    outline: none;
+}
+
+.comment-writer-name {
+    width: 240px;
+    height: calc((100% - 10px) / 3);
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid #34495e;
+    margin-right: 10px;
+    font-size: 18px;
+    line-height: calc((100% - 10px) / 3);
+    outline: none;
+    padding: 0px 5px;
+}
+
+.sumbit-comment-btn {
+    width: 50px;
+    height: calc((100% - 10px) / 3);
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: inset -3px 3px 4px rgba(255, 255, 255, .6),
+                inset 3px -3px 4px rgba(0, 0, 0, .3);
+    outline: none;
+    border: none;
+}
+
+.sumbit-comment-btn:active {
+    box-shadow: inset -3px 3px 4px rgba(0, 0, 0, .3),
+                inset 3px -3px 4px rgba(255, 255, 255, .6);
+}
+
+
+
+#resume-footer {
+    height: 190px;
+    background-color: #475050;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* 评论内容文本展开图标和点击展开效果 */
+/* 滚动条样式 */

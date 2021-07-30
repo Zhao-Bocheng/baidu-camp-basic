@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: white;
+    height: 1500px;
+}
+
+ul {
+    list-style: none;
+}
+
+.w {
+    width: 960px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+i {
+    font-style: normal;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}

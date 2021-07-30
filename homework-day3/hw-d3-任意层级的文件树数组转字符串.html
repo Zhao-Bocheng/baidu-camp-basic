@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>任意层级的目录树-函数实现</title>
+</head>
+
+<body>
+    <script>
+        const dirArr = [
+            'index.html',
+            'js',
+            ['index.js'],
+            'css',
+            ['index.css']
+        ];
+
+        document.body.innerHTML = buildDir(dirArr);
+
+        function buildDir(dirArr) {
+            let res = '';
+            for (let i = 0; i < dirArr.length; i++) {
+                if(i + 1 < dirArr.length && typeof dirArr[i + 1] !== 'string') {
+                    res += '<li>' + dirArr[i] + buildDir(dirArr[i + 1]) + '</li>';
+                    i ++;
+                } else {
+                    res += '<li>' + dirArr[i] + '</li>';
+                }
+            }
+
+            return '<ul>' + res + '</ul>';
+        }
+    </script>
+</body>
+
+</html>

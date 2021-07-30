@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    /* max-width: 750px; */
+    /* margin: 0 auto; */
+    min-height: 100vh;
+    background-color: #1e1e1e;
+    color: #ccc;
+}
+
+#todo-header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3c3c3c;
+}
+
+#todo-header h1 {
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+#todo-input {
+    width: 400px;
+    height: 30px;
+    line-height: 30px;
+    border: none;
+    outline: none;
+    padding: 0px 10px;
+    font-size: 14px;
+    box-shadow: 0px 0px 4px #000 inset;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 0px 30px;
+}
+
+#add-btn {
+    border: none;
+    border-radius: 5px;
+    width: 50px;
+    height: 26px;
+    font-weight: bold;
+    box-shadow: inset -3px 3px 5px 0px rgba(255, 255, 255, .8),
+                inset 3px -3px 5px 0px rgba(0, 0, 0, .4);
+}
+
+#add-btn:active {
+    box-shadow: inset -3px 3px 5px 0px rgba(0, 0, 0, .4),
+                inset 3px -3px 5px 0px rgba(255, 255, 255, .8);
+}
+
+#undone,
+#done {
+    width: 635px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#undone-head,
+#done-head {
+    font-size: 18px;
+    border-bottom: 2px solid #ccc;
+    padding-left: 10px;
+}
+
+#undone-list {
+    width: 100%;
+}
+
+.item-text {
+    flex: 1;
+    color: #d4d4d4;
+}
+
+.undone-item,
+.done-item {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    line-height: 40px;
+}
+
+.undone-item input,
+.done-item input {
+    width: 20px;
+    height: 20px;
+    margin: 0px 10px;
+}
+
+.done-item {
+    opacity: 0.6;
+}
+
+.undone-item img,
+.done-item img {
+    width: 20px;
+    justify-self: flex-end;
+    cursor: pointer;
+}
